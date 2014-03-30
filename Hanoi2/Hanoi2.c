@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+int n;
+
+		
+printf("Cuantos discos:");
+scanf("%d",&n);
+	
+hanoi(n);
+printf("Movimientos:%d",hanoi(n)); 
+
+return 0;
+}
+
+int hanoi(n) {
+if (n == 0){
+return 0;
+}
+
+else{
+return 2 * hanoi(n-1) + 1;
+}
+
+return 0;
+}
